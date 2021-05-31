@@ -26,8 +26,9 @@ get_header();
         <img src="" alt="">
         <div>
             <h2></h2>
+            <h3></h3>
+
         </div>
-        <h3></h3>
         <p></p>
     </article>
 </template>
