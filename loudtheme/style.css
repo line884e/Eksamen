@@ -1,0 +1,261 @@
+/*
+
+Theme: loudtheme
+Template: twentynineteen
+Author: Elisabeth Olsen
+Version: 1.0.223
+Description: Stylish Child Theme based on Twenty Nineteen.
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+img {
+    width: 100%;
+    overflow: hidden;
+}
+
+.pil {
+    float: left;
+    width: 25px;
+    margin: 20px;
+}
+
+.pil:hover {
+    transform: scale(1.02);
+}
+
+.inline {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+
+/*grid styling på loob view af podcasts*/
+#podcastcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    grid-gap: 1em;
+    margin: 2em;
+}
+
+article {
+    background-color: white;
+}
+
+.episode_margin h2 {
+    margin-top: -15rem;
+}
+
+.episode_titel {
+    margin-left: 15px;
+}
+
+.article_episode:hover {
+    transform: scale(1.01);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 660px) {
+    .article_episode {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.podcast_article:hover {
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+.podcast_tekst {
+    margin-right: 10rem;
+    margin-left: 10rem;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Krona One', sans-serif, bold;
+    font-size: 40px;
+    color: #D8322D;
+
+}
+
+h2 {
+    font-size: 2rem;
+    padding: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-size: 0.7rem;
+    padding: 1vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+button {
+    background-color: #BFD9E8;
+}
+
+/*"alle" knappen*/
+button:hover {
+    background-color: #BFD9E8;
+    color: #D8322D;
+}
+
+/*filtrerings knapper*/
+button.filter:hover {
+    background-color: #BFD9E8;
+    color: #D8322D;
+}
+
+button:input:hover {
+    background-color: #BFD9E8;
+}
+
+nav {
+    text-align: center;
+}
+
+.valgt {
+    color: #D8322D;
+}
+
+/*fjern sort hover i chrome*/
+button:focus {
+    outline-color: #DED0B3;
+    background-color: #BFD9E8;
+}
+
+/*episode loop view*/
+#episoder {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-gap: 1em;
+    margin: 1em;
+}
+
+#sendeplancontainer {
+    max-width: 28rem;
+    margin: 1rem;
+    margin-right: auto;
+    margin-left: auto;
+
+}
+
+.article_sendeplan {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+    border: solid 0.5px black;
+}
+
+.article_sendeplan:hover {
+    color: #D8322D;
+    cursor: pointer;
+}
+
+.article_sendeplan img {
+    width: 8rem;
+    height: 100%;
+}
+
+.article_sendeplan h2 {
+    font-size: 1rem;
+}
+
+/*podcast single view*/
+.wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+@media only screen and (max-width: 660px) {
+    .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+.col1,
+.col2 {
+    background-color: #e7929d54;
+}
+
+.col2 img {
+    object-fit: cover;
+    height: 100%;
+}
+
+#readmore {
+    font-family: 'Roboto', sans-serif;
+    margin-left: 13px;
+    color: #D8322D;
+    font-weight: 900;
+}
+
+#readmore:hover {
+    color: #e7929d54;
+}
+
+/*episode single view*/
+.peter {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 4em;
+}
+
+.col3 img {
+    object-fit: cover;
+    height: 100%;
+}
+
+@media only screen and (max-width: 660px) {
+    .peter {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+}
+
+/*gå til top/bund knap*/
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #D8322D;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+#myBtn:hover {
+    background-color: #E7929D;
+}
+
+.col4 img {
+    width: 3rem;
+}
+
+.itunes {
+    padding: 10px;
+}
+
+.podimo {
+    padding: 10px;
+}
+
+.spotify {
+    padding: 10px;
+}
+
+.google {
+    padding: 10px;
+}
