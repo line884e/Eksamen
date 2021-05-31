@@ -75,7 +75,7 @@ get_header();
         };
 
         function filtrering() {
-            filterPodcast = this.dataset.produkt;
+            filterProdukt = this.dataset.produkt;
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
 
