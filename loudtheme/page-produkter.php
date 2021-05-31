@@ -19,7 +19,6 @@ get_header();
     <h1 id="overskrift">Produkt</h1>
 </div>
 
-<p class="produkt_tekst">Radio LOUD har omkring 108 podcasts og der kommer hele tiden flere til. Om du er til krimi, kærlighed eller kultur og samfund, så er der lidt til enhver smag. Få rengøringen klaret hurtigere eller læn dig tilbage og nyd den ellers kedelige togtur med en spændende/hyggelig/sjov/lærerig podcast i ørerne. Du kan nemlig høre vores podcast hvor og hvornår du vil på de mest populære tjenester.</p>
 
 <!--template-->
 <template>
