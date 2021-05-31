@@ -14,16 +14,16 @@ get_header();
 
 <div class="inline">
     <div class="pil">
-        <a href="http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
+        <a href="http://up2create.dk/kea/2-semester/eksamen/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
     </div>
-    <h1 id="overskrift">Podcast</h1>
+    <h1 id="overskrift">Produkt</h1>
 </div>
 
-<p class="podcast_tekst">Radio LOUD har omkring 108 podcasts og der kommer hele tiden flere til. Om du er til krimi, kærlighed eller kultur og samfund, så er der lidt til enhver smag. Få rengøringen klaret hurtigere eller læn dig tilbage og nyd den ellers kedelige togtur med en spændende/hyggelig/sjov/lærerig podcast i ørerne. Du kan nemlig høre vores podcast hvor og hvornår du vil på de mest populære tjenester.</p>
+<p class="produkt_tekst">Radio LOUD har omkring 108 podcasts og der kommer hele tiden flere til. Om du er til krimi, kærlighed eller kultur og samfund, så er der lidt til enhver smag. Få rengøringen klaret hurtigere eller læn dig tilbage og nyd den ellers kedelige togtur med en spændende/hyggelig/sjov/lærerig podcast i ørerne. Du kan nemlig høre vores podcast hvor og hvornår du vil på de mest populære tjenester.</p>
 
 <!--template-->
 <template>
-    <article class="podcast_article">
+    <article class="produkt_article">
         <img src="" alt="">
         <div>
             <h2></h2>
@@ -33,8 +33,8 @@ get_header();
 
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
-        <nav id="filtrering"><button data-podcast="alle" class="valgt">Alle</button></nav>
-        <section id="podcastcontainer">
+        <nav id="filtrering"><button data-produkt="alle" class="valgt">Alle</button></nav>
+        <section id="produktcontainer">
         </section>
     </main>
 
@@ -42,20 +42,20 @@ get_header();
 
     <!--script-->
     <script>
-        let podcasts;
+        let produkter;
         let categories;
-        let filterPodcast = "alle";
-        const dbUrl = "http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/wp-json/wp/v2/podcasts?per_page=100";
-        const catUrl = "http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/wp-json/wp/v2/categories";
+        let filterProdukt = "alle";
+        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
+        const catUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/categories";
 
         async function getJson() {
             console.log("getJson");
             const data = await fetch(dbUrl);
             const catdata = await fetch(catUrl);
-            podcasts = await data.json();
+            produkter = await data.json();
             categories = await catdata.json();
             console.log(categories)
-            visPodcasts();
+            visProdukter();
             opretKnapper();
         }
 
@@ -63,7 +63,10 @@ get_header();
             console.log("opretKnapper");
 
             categories.forEach(cat => {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-podcast="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering").innerHTML += < button class = "filter"
+                data - produkt = "${cat.id}" > $ {
+                    cat.name
+                } < /button>
             })
 
             addEventListenerToButtons();
@@ -76,30 +79,30 @@ get_header();
         };
 
         function filtrering() {
-            filterPodcast = this.dataset.podcast;
+            filterProdukt = this.dataset.produkt;
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
 
-            console.log(filterPodcast);
+            console.log(filterProdukt);
 
-            visPodcasts();
+            visProdukter();
         }
 
-        function visPodcasts() {
-            console.log("visPodcasts");
+        function visProdukter() {
+            console.log("visProdukter");
             let temp = document.querySelector("template");
-            let container = document.querySelector("#podcastcontainer");
+            let container = document.querySelector("#produktcontainer");
             container.innerHTML = "";
-            podcasts.forEach(podcast => {
+            produkter.forEach(produkt => {
 
-                if (filterPodcast == "alle" || podcast.categories.includes(parseInt(filterPodcast))) {
+                if (filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
 
                     let klon = temp.cloneNode(true).content;
                     console.log("KLON", klon);
-                    klon.querySelector("h2").innerHTML = podcast.title.rendered;
-                    klon.querySelector("img").src = podcast.billede.guid;
+                    klon.querySelector("h2").innerHTML = produkt.title.rendered;
+                    klon.querySelector("img").src = produkt.billede.guid;
                     klon.querySelector("article").addEventListener("click", () => {
-                        location.href = podcast.link;
+                        location.href = produkt.link;
                     })
                     container.appendChild(klon);
                 }
