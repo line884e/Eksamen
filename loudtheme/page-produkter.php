@@ -27,7 +27,6 @@ get_header();
         <div>
             <h2></h2>
             <h3></h3>
-
         </div>
         <p></p>
     </article>
