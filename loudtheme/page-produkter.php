@@ -101,7 +101,7 @@ get_header();
                     console.log("KLON", klon);
                     klon.querySelector("h2").innerHTML = produkt.title.rendered;
                     klon.querySelector("img").src = produkt.billede.guid;
-                    klon.querySelector("h3").innerHTML = produkt.beskrivelse_produkt.rendered;
+                    klon.querySelector("h3").innerHTML = produkt.beskrivelse_produkt;
                     klon.querySelector("p").innerHTML = produkt.pris + "kr";
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = produkt.link;
