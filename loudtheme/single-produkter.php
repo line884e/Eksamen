@@ -12,7 +12,7 @@
 get_header();
 ?>
 <div class="pil">
-    <a href="http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/podcast/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
+    <a href="http://up2create.dk/kea/2-semester/eksamen/wordpress/produkt/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
 </div>
 
 <!--template-->
