@@ -56,10 +56,3 @@
         <div id="content" class="site-content">
 
             <!--       lyd animation-->
-            <div class="animation">
-                <span class="a1"></span>
-                <span class="a2"></span>
-                <span class="a3"></span>
-                <span class="a4"></span>
-                <span class="a5"></span>
-            </div>
