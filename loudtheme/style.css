@@ -16,6 +16,7 @@ img {
     overflow: hidden;
 }
 
+
 .pil {
     float: left;
     width: 25px;
@@ -44,6 +45,7 @@ article {
     background-color: white;
 }
 
+/*
 .episode_margin h2 {
     margin-top: -15rem;
 }
@@ -63,6 +65,7 @@ article {
         grid-template-columns: 1fr;
     }
 }
+*/
 
 .podcast_article:hover {
     transform: scale(1.03);
@@ -78,7 +81,7 @@ h1 {
     text-align: center;
     font-family: 'Krona One', sans-serif, bold;
     font-size: 40px;
-    color: #D8322D;
+    color: #75485E;
 
 }
 
@@ -95,23 +98,23 @@ p {
 }
 
 button {
-    background-color: #BFD9E8;
+    background-color: #E1C9C1;
 }
 
 /*"alle" knappen*/
 button:hover {
-    background-color: #BFD9E8;
-    color: #D8322D;
+    background-color: #E1C9C1;
+    color: #75485E;
 }
 
 /*filtrerings knapper*/
 button.filter:hover {
-    background-color: #BFD9E8;
-    color: #D8322D;
+    background-color: #E1C9C1;
+    color: #75485E;
 }
 
 button:input:hover {
-    background-color: #BFD9E8;
+    background-color: #E1C9C1;
 }
 
 nav {
@@ -119,16 +122,17 @@ nav {
 }
 
 .valgt {
-    color: #D8322D;
+    color: #75485E;
 }
 
 /*fjern sort hover i chrome*/
 button:focus {
-    outline-color: #DED0B3;
-    background-color: #BFD9E8;
+    outline-color: #75485E;
+    background-color: #E1C9C1;
 }
 
-/*episode loop view*/
+/*
+episode loop view
 #episoder {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -143,7 +147,9 @@ button:focus {
     margin-left: auto;
 
 }
+*/
 
+/*
 .article_sendeplan {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
@@ -163,6 +169,7 @@ button:focus {
 .article_sendeplan h2 {
     font-size: 1rem;
 }
+*/
 
 /*podcast single view*/
 .wrapper {
@@ -227,7 +234,7 @@ button:focus {
     z-index: 99;
     border: none;
     outline: none;
-    background-color: #D8322D;
+    background-color: #75485E;
     color: white;
     cursor: pointer;
     padding: 15px;
@@ -237,9 +244,10 @@ button:focus {
 }
 
 #myBtn:hover {
-    background-color: #E7929D;
+    background-color: #E1C9C1;
 }
 
+/*
 .col4 img {
     width: 3rem;
 }
@@ -259,3 +267,4 @@ button:focus {
 .google {
     padding: 10px;
 }
+*/
