@@ -33,7 +33,7 @@ img {
 
 
 /*grid styling på loob view af podcasts*/
-#podcastcontainer {
+#produktcontainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
     grid-gap: 1em;
