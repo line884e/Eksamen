@@ -27,6 +27,7 @@ get_header();
         <div>
             <h2></h2>
         </div>
+        <h3></h3>
         <p></p>
     </article>
 </template>
@@ -100,6 +101,7 @@ get_header();
                     console.log("KLON", klon);
                     klon.querySelector("h2").innerHTML = produkt.title.rendered;
                     klon.querySelector("img").src = produkt.billede.guid;
+                    klon.querySelector("h3").src = produkt.beskrivelse_produkt.rendered;
                     klon.querySelector("p").innerHTML = produkt.pris + "kr";
                     klon.querySelector("article").addEventListener("click", () => {
                         location.href = produkt.link;
