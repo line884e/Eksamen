@@ -16,6 +16,9 @@ img {
     overflow: hidden;
 }
 
+body {
+    background-color: #E1C9C1;
+}
 
 .pil {
     float: left;
