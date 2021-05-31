@@ -23,8 +23,8 @@ get_header();
             <div class="wrapper">
                 <div class="col1">
                     <h1></h1>
-                    <p class="vearter"></p>
-                    <p class="beskrivelse_podcast"></p>
+                    <p class="pris"></p>
+                    <p class="beskrivelse_produkt"></p>
                 </div>
                 <div class="col2">
                     <img src="" alt="">
@@ -32,6 +32,7 @@ get_header();
             </div>
         </article>
 
+        <!--
         <h2 class="episode_titel">Episoder</h2>
         <section id="episoder">
             <template>
@@ -42,60 +43,61 @@ get_header();
                 </article>
             </template>
         </section>
+-->
     </main>
 
     <!--script-->
     <script>
-        let podcast;
-        let episoder;
-        let aktuelpodcast = <?php echo get_the_ID() ?>;
+        let produkt;
+        //        let episoder;
+        let aktuelprodukt = <?php echo get_the_ID() ?>;
         var elmnt = document.getElementById("content");
 
-        const dbUrl = "http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/wp-json/wp/v2/podcasts/" + aktuelpodcast;
-        const episodeUrl = "http://thethirdolsentwin.dk/kea/2-semester/tema9/loud/wordpress/wp-json/wp/v2/episoder?per_page=100";
-
-        const container = document.querySelector("#episoder");
+        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/" + aktuelprodukt;
+        //        const episodeUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/episoder?per_page=100";
+        //
+        //        const container = document.querySelector("#episoder");
 
 
         async function getJson() {
             const data = await fetch(dbUrl);
-            podcast = await data.json();
+            produkt = await data.json();
 
-            const data2 = await fetch(episodeUrl);
-            episoder = await data2.json();
-            console.log("episoder: ", episoder);
+            //            const data2 = await fetch(episodeUrl);
+            //            episoder = await data2.json();
+            //            console.log("episoder: ", episoder);
 
-            visPodcasts();
-            visEpisoder();
+            visProdukter();
+            //            visEpisoder();
         }
 
-        function visPodcasts() {
-            console.log("visPodcasts");
-            document.querySelector("h1").innerHTML = podcast.title.rendered;
-            document.querySelector(".martin img").src = podcast.billede.guid;
-            document.querySelector(".beskrivelse_podcast").innerHTML = podcast.beskrivelse_podcast;
-            document.querySelector(".vearter").innerHTML = "<b>Værter: </b>" + podcast.vearter;
+        function visProdukter() {
+            console.log("visProdukter");
+            document.querySelector("h1").innerHTML = produkt.title.rendered;
+            document.querySelector(".martin img").src = produkt.billede.guid;
+            document.querySelector(".beskrivelse_produkt").innerHTML = produkt.beskrivelse_produkt;
+            document.querySelector(".pris").innerHTML = "<b>Pris: </b>" + produkt.pris;
         }
 
-        function visEpisoder() {
-            console.log("visEpisoder");
-            let temp = document.querySelector("template");
-            episoder.forEach(episode => {
-                console.log("loop id :", aktuelpodcast);
-                if (episode.horer_til_podcast == aktuelpodcast) {
-                    console.log("loop kører id :", aktuelpodcast);
-                    let klon = temp.cloneNode(true).content;
-                    klon.querySelector("h2").innerHTML = episode.title.rendered;
-                    klon.querySelector(".udgivelsesdato").innerHTML = "<b>Dato: </b>" + episode.udgivelsesdato;
-                    klon.querySelector("article").addEventListener("click", () => {
-                        location.href = episode.link;
-                    })
-                    klon.querySelector("a").href = episode.link;
-                    console.log("episode :", episode.link);
-                    container.appendChild(klon);
-                }
-            })
-        }
+        //        function visEpisoder() {
+        //            console.log("visEpisoder");
+        //            let temp = document.querySelector("template");
+        //            episoder.forEach(episode => {
+        //                console.log("loop id :", aktuelpodcast);
+        //                if (episode.horer_til_podcast == aktuelpodcast) {
+        //                    console.log("loop kører id :", aktuelpodcast);
+        //                    let klon = temp.cloneNode(true).content;
+        //                    klon.querySelector("h2").innerHTML = episode.title.rendered;
+        //                    klon.querySelector(".udgivelsesdato").innerHTML = "<b>Dato: </b>" + episode.udgivelsesdato;
+        //                    klon.querySelector("article").addEventListener("click", () => {
+        //                        location.href = episode.link;
+        //                    })
+        //                    klon.querySelector("a").href = episode.link;
+        //                    console.log("episode :", episode.link);
+        //                    container.appendChild(klon);
+        //                }
+        //            })
+        //        }
 
         getJson();
 
