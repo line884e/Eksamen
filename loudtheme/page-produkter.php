@@ -63,7 +63,7 @@ get_header();
             console.log("opretKnapper");
 
             categories.forEach(cat => {
-                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-podcast="${cat.id}">${cat.name}</button>`
+                document.querySelector("#filtrering").innerHTML += `<button class="filter" data-produkt="${cat.id}">${cat.name}</button>`
             })
 
             addEventListenerToButtons();
@@ -76,13 +76,13 @@ get_header();
         };
 
         function filtrering() {
-            filterPodcast = this.dataset.podcast;
+            filterPodcast = this.dataset.produkt;
             document.querySelector(".valgt").classList.remove("valgt");
             this.classList.add("valgt");
 
-            console.log(filterPodcast);
+            console.log(filterProdukt);
 
-            visPodcasts();
+            visProdukter();
         }
 
 
