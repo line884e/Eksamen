@@ -47,7 +47,7 @@ get_header();
         let produkter;
         let categories;
         let filterProdukt = "alle";
-        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/nyheder/?per_page=100";
+        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/nyheder";
         const catUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/categories";
 
         async function getJson() {
