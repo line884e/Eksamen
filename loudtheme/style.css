@@ -43,8 +43,11 @@ img {
 
 
 #produktcontainer img {
-    max-height: 350px;
+    height: 350px;
     max-width: 300px;
+    object-fit: contain;
+}
+
 }
 
 .produkt_div {
