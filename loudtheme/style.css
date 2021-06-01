@@ -48,6 +48,11 @@ img {
     max-width: 300px;
 }
 
+#produkt_div{
+    max-height: 300px;
+    max-width: 300px;
+}
+
 article {
     background-color: white;
 }

@@ -25,7 +25,7 @@ get_header();
 <template>
     <article class="produkt_article">
          <img src="" alt="" width="250" height="250">
-        <div>
+        <div class="produkt_div">
             <h2></h2>
             <h3></h3>
         <p></p>
