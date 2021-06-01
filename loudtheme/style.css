@@ -8,7 +8,7 @@ Description: Stylish Child Theme based on Twenty Nineteen.
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 img {
@@ -94,28 +94,33 @@ article {
 
 h1 {
     text-align: center;
-    font-family: 'Krona One', sans-serif, bold;
-    font-size: 40px;
-    color: #75485E;
+    font-family: 'Trirong', serif;
+    font-size: 70px;
+    color: #4C4B4B;
 
 }
 
 h2 {
-    font-size: 1rem;
+    font-size: 16px;
+    font-weight: 200;
     padding: 1vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trirong', serif;
+    color: #4C4B4B;
 }
 
 h3 {
-    font-size: 1rem;
+    font-size: 10px;
+    font-weight: 400;
     padding: 1vw;
     font-family: 'Roboto', sans-serif;
+    color: #4C4B4B;
 }
 
 p {
     font-size: 0.7rem;
     padding: 1vw;
     font-family: 'Roboto', sans-serif;
+    color: #4C4B4B;
 }
 
 button {
@@ -124,14 +129,14 @@ button {
 
 /*"alle" knappen*/
 button:hover {
-    background-color: #E1C9C1;
-    color: #75485E;
+    /*    background-color: #E1C9C1;*/
+    color: #4C4B4B;
 }
 
 /*filtrerings knapper*/
 button.filter:hover {
     background-color: #E1C9C1;
-    color: #75485E;
+    color: #4C4B4B;
 }
 
 button:input:hover {
