@@ -1,3 +1,4 @@
+
 /*
 
 Theme: vorestema
@@ -16,9 +17,6 @@ img {
     overflow: hidden;
 }
 
-body {
-    background-color: #E1C9C1;
-}
 
 .pil {
     float: left;
@@ -276,4 +274,4 @@ episode loop view
 .google {
     padding: 10px;
 }
-*/
+*
