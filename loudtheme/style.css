@@ -254,6 +254,11 @@ episode loop view
     background-color: #E1C9C1;
 }
 
+
+h1:not(.site-title)::before, h2::before{
+    content: none;
+}
+
 /*
 .col4 img {
     width: 3rem;
