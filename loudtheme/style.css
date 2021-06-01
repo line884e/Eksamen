@@ -8,7 +8,7 @@ Description: Stylish Child Theme based on Twenty Nineteen.
 
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Trirong:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Trirong&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 img {
@@ -95,6 +95,7 @@ article {
 h1 {
     text-align: center;
     font-family: 'Trirong', serif;
+    font-weight: 200;
     font-size: 70px;
     color: #4C4B4B;
 
@@ -119,6 +120,7 @@ h3 {
 p {
     font-size: 0.7rem;
     padding: 1vw;
+    font-weight: 400;
     font-family: 'Roboto', sans-serif;
     color: #4C4B4B;
 }
@@ -129,7 +131,7 @@ button {
 
 /*"alle" knappen*/
 button:hover {
-    /*    background-color: #E1C9C1;*/
+    background-color: #E1C9C1;
     color: #4C4B4B;
 }
 
@@ -148,7 +150,7 @@ nav {
 }
 
 .valgt {
-    color: #75485E;
+    color: #4C4B4B;
 }
 
 /*fjern sort hover i chrome*/
