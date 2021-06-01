@@ -11,6 +11,7 @@
 
 get_header();
 ?>
+ <?php the_content(); ?>
 
 <div class="inline">
     <div class="pil">
