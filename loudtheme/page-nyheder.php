@@ -44,7 +44,7 @@ get_header();
 
     <!--script-->
     <script>
-        let produkter;
+        let nyheder;
         let categories;
         let filterProdukt = "alle";
         const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/nyheder";
@@ -54,10 +54,10 @@ get_header();
             console.log("getJson");
             const data = await fetch(dbUrl);
             const catdata = await fetch(catUrl);
-            produkter = await data.json();
+            nyheder = await data.json();
             categories = await catdata.json();
             console.log(categories)
-            visProdukter();
+            visNyheder();
             opretKnapper();
         }
 
@@ -89,14 +89,14 @@ get_header();
 
 
 
-        function visProdukter() {
-            console.log("visProdukter");
+        function visNyheder() {
+            console.log("visNyheder");
             let temp = document.querySelector("template");
             let container = document.querySelector("#produktcontainer");
             container.innerHTML = "";
-            produkter.forEach(produkt => {
+            nyheder.forEach(produkt => {
 
-                if (filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
+                if (filterNyhed == "alle" || nyhed.categories.includes(parseInt(filterNyhed))) {
 
                     let klon = temp.cloneNode(true).content;
                     console.log("KLON", klon);
