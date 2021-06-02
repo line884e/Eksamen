@@ -35,7 +35,7 @@ get_header();
 
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
-        <nav id="filtrering"><button data-produkt="alle" class="valgt">Alle</button></nav>
+        <nav id="filtrering"><button data-produkt="alle" class="valgt">Nyheder</button></nav>
         <section id="produktcontainer">
         </section>
     </main>
