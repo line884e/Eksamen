@@ -26,7 +26,7 @@ get_header();
     <article class="produkt_article">
          <img src="" alt="" width="250" height="250">
         <div class="produkt_div">
-            <h2></h2>
+            <h2 class="produkt_h2"></h2>
             <h3></h3>
         <p></p>
          </div>
@@ -41,6 +41,27 @@ get_header();
     </main>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Gå til top</button>
+
+
+    <style>
+
+        .produkt_div {
+    text-align: center;
+}
+
+
+        h2{margin: 0.3em;
+        padding-top: 1em;}
+
+        h3{padding:1em;
+            margin: 0.3em;
+             }
+
+        p{
+            padding: 0;
+        margin: 1em;}
+
+    </style>
 
     <!--script-->
     <script>
