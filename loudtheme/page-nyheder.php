@@ -17,7 +17,7 @@ get_header();
     <div class="pil">
         <a href="http://up2create.dk/kea/2-semester/eksamen/wordpress/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
     </div>
-    <h1 id="overskrift">Produkt</h1>
+    <h1 id="overskrift">Nyheder</h1>
 </div>
 
 
@@ -26,7 +26,7 @@ get_header();
     <article class="produkt_article">
          <img src="" alt="" width="250" height="250">
         <div class="produkt_div">
-            <h2 class="produkt_h2"></h2>
+            <h2></h2>
             <h3></h3>
         <p></p>
          </div>
@@ -35,50 +35,29 @@ get_header();
 
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
-        <nav id="filtrering"><button data-produkt="alle" class="valgt">Alle</button></nav>
+        <nav id="filtrering"><button data-produkt="alle" class="valgt">Nyheder</button></nav>
         <section id="produktcontainer">
         </section>
     </main>
 
     <button onclick="topFunction()" id="myBtn" title="Go to top">Gå til top</button>
 
-
-    <style>
-
-        .produkt_div {
-    text-align: center;
-}
-
-
-        h2{margin: 0.3em;
-        padding-top: 1em;}
-
-        h3{padding:1em;
-            margin: 0.3em;
-             }
-
-        p{
-            padding: 0;
-        margin: 1em;}
-
-    </style>
-
     <!--script-->
     <script>
-        let produkter;
+        let nyheder;
         let categories;
         let filterProdukt = "alle";
-        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter?per_page=100";
+        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/nyheder";
         const catUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/categories";
 
         async function getJson() {
             console.log("getJson");
             const data = await fetch(dbUrl);
             const catdata = await fetch(catUrl);
-            produkter = await data.json();
+            nyheder = await data.json();
             categories = await catdata.json();
             console.log(categories)
-            visProdukter();
+            visNyheder();
             opretKnapper();
         }
 
@@ -110,14 +89,14 @@ get_header();
 
 
 
-        function visProdukter() {
-            console.log("visProdukter");
+        function visNyheder() {
+            console.log("visNyheder");
             let temp = document.querySelector("template");
             let container = document.querySelector("#produktcontainer");
             container.innerHTML = "";
-            produkter.forEach(produkt => {
+            nyheder.forEach(produkt => {
 
-                if (filterProdukt == "alle" || produkt.categories.includes(parseInt(filterProdukt))) {
+                if (filterNyhed == "alle" || nyhed.categories.includes(parseInt(filterNyhed))) {
 
                     let klon = temp.cloneNode(true).content;
                     console.log("KLON", klon);
