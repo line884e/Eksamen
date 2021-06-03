@@ -23,8 +23,8 @@ get_header();
             <div class="wrapper">
                 <div class="col1">
                     <h1></h1>
-                    <p class="pris"></p>
                     <p class="beskrivelse_produkt"></p>
+                    <p class="pris"></p>
                 </div>
                 <div class="col2">
                     <img src="" alt="">
