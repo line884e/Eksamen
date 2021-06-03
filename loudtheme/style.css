@@ -288,6 +288,11 @@ h2::before {
     content: none;
 }
 
+
+.martin{max-width: 1000px;
+    margin: auto;
+}
+
 /*
 .col4 img {
     width: 3rem;
@@ -309,3 +314,4 @@ h2::before {
     padding: 10px;
 }
 *
+
