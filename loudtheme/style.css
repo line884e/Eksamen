@@ -63,20 +63,30 @@ img {
 
 }
 
-article {
-    background-color: white;
+.produkt_article {
+background: white;
+    border-radius: 0.5em;
 }
 
-.beskrivelse_produkt{font-size: 1.6rem;
-    text-align: center;
+.single_billede{
+    border-radius: 0.5em;
+}
+
+.beskrivelse_produkt{font-size: 1rem;
+    text-align: left;
     margin: 0;
     padding: 0;
 
 }
 
+.single_p{
+    text-align: left;
+    padding: 0;
+}
+
 .pris{
-    font-size: 1.6rem;
-    text-align: center;
+    font-size: 1rem;
+    text-align: left;
     margin: 0;
     padding: 0;
 }
@@ -126,30 +136,36 @@ h1 {
 
 h2 {
     font-size: 16px;
-    font-weight: 200;
     padding: 1vw;
     font-family: 'Trirong', sans-serif;
     color: #4C4B4B;
+    font-weight: 500;
 }
 
 h3 {
     font-size: 0.6rem;
-    font-weight: 400;
     padding: 1vw;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trirong', sans-serif;
     color: #4C4B4B;
+    font-weight: 400;
 }
 
 p {
     font-size: 0.6rem;
     padding: 1vw;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trirong', sans-serif;
     color: #4C4B4B;
 }
 
 button {
     background-color: #E1C9C1;
+}
+
+.laeg_i_kurv{
+    background-color: #535151;
+    font-size: 0.6rem;
+    margin-top: 2em;
 }
 
 /*"alle" knappen*/
@@ -225,7 +241,8 @@ episode loop view
 /*podcast single view*/
 .wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
+    grid-gap: 50px;
 }
 
 @media only screen and (max-width: 660px) {
@@ -237,7 +254,8 @@ episode loop view
 
 .col1,
 .col2 {
-    background-color: #e7929d54;
+    text-align: center;
+/*    background-color: #e7929d54;*/
 }
 
 .col1{
@@ -312,8 +330,9 @@ h2::before {
 }
 
 
-.martin{max-width: 1000px;
+.martin{max-width: 800px;
     margin: auto;
+    background-color: none;
 }
 
 
