@@ -1,52 +1,130 @@
-<div class="wrapper">
-  <div class="box header">Header</div>
-  <div class="box sidebar">Sidebar</div>
-    <div class="box content">Content </div>
+<section id="sektion_singleview">
+<article>
+    <div class="singleview_row">
+        <div class="singleview_column" div id="slideshow">
+            <div class="billede_slideshow">
+                <img class="img1" src="194016341_853170991947164_4875760459063868366_n.jpg">
+            </div>
+            <div class="skift_billede">
+            <button class="tilbage" onclick="plusSlides(-1)"></button>
+            <div>
+                <span class="dot valgt_dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            <button class="frem" onclick="plusSlides(1)"></button>
+            </div>
 
+        </div>
 
-    <style>
-        .sidebar {
-  grid-area: sidebar;
+        <div class="singleview_column">
+            <h2 class="navn">HER</h2>
+            <p class="prisen">HER</p>
+            <p class="beskrivelse">HER</p>
+            <button class="tilfoej">HER</button>
+        </div>
+
+    </div>
+</article>
+</section>
+<style>
+
+    @media screen and (min-width:1200px){
+    #sektion_singleview {
+        margin: 7% 80px 7% 80px;
+
+    }
+    }
+
+    @media screen and (min-width: 768px) {
+         #sektion_singeview {
+        margin: 10% 0 7% 0;
+    }
+
+    .singleview_row {
+        display: grid;
+        grid-template-columns: 3fr 4fr;
+        column-gap: 50px;
+    }
+
+    #slideshow {
+        background-color: #F2F0EA;
+        padding: 30px 30px 10px 30px;
+    }
+
+    img {
+        vertical-align: middle;
+    }
+
+    img {
+        height: auto;
+        max-width: 100%;
+    }
+
+    img {
+        border: 0;
+    }
+
+    .skift_billede {
+    display: flex;
+    justify-content: center;
 }
 
-.content {
-  grid-area: content;
-  position: relative;
+    #skift_billede{display: flex;
+justify-content: center;
+    }
+
+    .tilbage{
+        font-size: 1.2rem;
+padding: 5px;
+margin: 10px;
+    }
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 2px;
+    background-color: #939393;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    margin-top: 17px;
 }
 
-.header {
-  grid-area: header;
-}
-
-.footer {
-  grid-area: footer;
-}
-
-.wrapper {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 200px 200px 200px;
-    grid-template-areas:
-    "header  header  header"
-    "sidebar content content"
-    "footer  footer  footer";
-    background-color: #fff;
-    color: #444;
-  }
-
-
-.box {
-  background-color: #444;
-  color: #fff;
-  border-radius: 5px;
-  padding: 50px;
-  font-size: 150%;
-}
-
-.header,
-.footer {
-  background-color: #999;
+.valgt_dot {
+    background-color: #555454;
 }
 
 
-    </style>
+.skift_billede .frem,
+.skift_billede .tilbage {
+    background: none;
+    color: black;
+}
+
+.skift_billede .frem:hover,
+.skift_billede .tilbage:hover {
+    color: #939393;
+}
+
+    article{
+            justify-content: center;
+    justify-items: center;
+    display: flex;
+        width: 1000px;
+    }
+
+</style>
+
+
+
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+    console.log('DOM fully loaded and parsed');
+
+})
+    function onclick(event) {
+  plusSlides(-1)
+}
+
+</script>
