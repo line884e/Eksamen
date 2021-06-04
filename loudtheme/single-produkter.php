@@ -11,6 +11,7 @@
 
 get_header();
 ?>
+ <?php the_content(); ?>
 <div class="pil">
     <a href="http://up2create.dk/kea/2-semester/eksamen/wordpress/produkt/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
 </div>
@@ -128,4 +129,5 @@ get_header();
 </section>
 
 <?php
+
 get_footer();
