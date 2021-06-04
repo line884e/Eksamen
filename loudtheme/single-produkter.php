@@ -33,43 +33,23 @@ get_header();
             </div>
         </article>
 
-        <!--
-        <h2 class="episode_titel">Episoder</h2>
-        <section id="episoder">
-            <template>
-                <article class="article_episode">
-                    <h2>Episoder</h2>
-                    <p class="udgivelsesdato"></p>
-                    <a href="" id="readmore">Læs mere</a>
-                </article>
-            </template>
-        </section>
--->
+
     </main>
+    </section>
 
     <!--script-->
     <script>
         let produkt;
-        //        let episoder;
         let aktuelprodukt = <?php echo get_the_ID() ?>;
         var elmnt = document.getElementById("content");
 
         const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/" + aktuelprodukt;
-        //        const episodeUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/episoder?per_page=100";
-        //
-        //        const container = document.querySelector("#episoder");
 
 
         async function getJson() {
             const data = await fetch(dbUrl);
             produkt = await data.json();
-
-            //            const data2 = await fetch(episodeUrl);
-            //            episoder = await data2.json();
-            //            console.log("episoder: ", episoder);
-
             visProdukter();
-            //            visEpisoder();
         }
 
         function visProdukter() {
@@ -79,26 +59,6 @@ get_header();
             document.querySelector(".beskrivelse_produkt").innerHTML = produkt.beskrivelse_produkt;
             document.querySelector(".pris").innerHTML = "<b>Pris: </b>" + produkt.pris;
         }
-
-        //        function visEpisoder() {
-        //            console.log("visEpisoder");
-        //            let temp = document.querySelector("template");
-        //            episoder.forEach(episode => {
-        //                console.log("loop id :", aktuelpodcast);
-        //                if (episode.horer_til_podcast == aktuelpodcast) {
-        //                    console.log("loop kører id :", aktuelpodcast);
-        //                    let klon = temp.cloneNode(true).content;
-        //                    klon.querySelector("h2").innerHTML = episode.title.rendered;
-        //                    klon.querySelector(".udgivelsesdato").innerHTML = "<b>Dato: </b>" + episode.udgivelsesdato;
-        //                    klon.querySelector("article").addEventListener("click", () => {
-        //                        location.href = episode.link;
-        //                    })
-        //                    klon.querySelector("a").href = episode.link;
-        //                    console.log("episode :", episode.link);
-        //                    container.appendChild(klon);
-        //                }
-        //            })
-        //        }
 
         getJson();
 
@@ -126,7 +86,7 @@ get_header();
 
     </script>
 
-</section>
+
 
 <?php
 

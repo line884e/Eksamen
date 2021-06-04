@@ -1,3 +1,22 @@
+<?php
+/**
+ * The template for displaying all single posts
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
+ *
+ * @package WordPress
+ * @subpackage Twenty_Nineteen
+ * @since Twenty Nineteen 1.0
+ */
+
+get_header();
+?>
+<div class="pil">
+    <a href="http://up2create.dk/kea/2-semester/eksamen/wordpress/produkt/"><img src="<?php echo get_stylesheet_directory_uri(); ?>/pil.png" alt="pil" class="pil"></a>
+</div>
+
+<!--template-->
+
 
 
 <div class="single_container">
@@ -6,7 +25,7 @@
     <div class="singleview_row">
         <div class="singleview_column" div id="slideshow">
             <div class="billede_slideshow">
-                <img class="img1" src="194016341_853170991947164_4875760459063868366_n.jpg">
+                <img class="img1" src="">
             </div>
             <div class="skift_billede">
             <button class="tilbage" onclick="plusSlides(-1)"></button>
@@ -21,7 +40,7 @@
         </div>
 
         <div class="singleview_column">
-            <h2 class="navn">HER</h2>
+            <h1 class="navn"></h1>
             <p class="prisen">HER</p>
             <p class="beskrivelse">HER</p>
             <button class="tilfoej">TILFØJ TIL KURV</button>
@@ -32,7 +51,11 @@
 </section>
 </div>
 
-<style>
+
+-->
+
+
+    <style>
 
     .single_container {
         margin-left: auto;
@@ -135,15 +158,49 @@ margin: 10px;
 
 </style>
 
+    <!--script-->
+    <script>
+        let produkt;
+        //        let episoder;
+        let aktuelprodukt = <?php echo get_the_ID() ?>;
+        var elmnt = document.getElementById("content");
+
+        const dbUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/produkter/" + aktuelprodukt;
+        //        const episodeUrl = "http://up2create.dk/kea/2-semester/eksamen/wordpress/wp-json/wp/v2/episoder?per_page=100";
+        //
+        //        const container = document.querySelector("#episoder");
 
 
-<script>
-    window.addEventListener('DOMContentLoaded', (event) => {
-    console.log('DOM fully loaded and parsed');
+        async function getJson() {
+            const data = await fetch(dbUrl);
+            produkt = await data.json();
 
-})
-    function onclick(event) {
-  plusSlides(-1)
-}
+            //            const data2 = await fetch(episodeUrl);
+            //            episoder = await data2.json();
+            //            console.log("episoder: ", episoder);
 
-</script>
+            visProdukter();
+            //            visEpisoder();
+        }
+
+        function visProdukter() {
+            console.log("visProdukter");
+//            document.querySelector("navn").innerHTML = produkt.title.rendered;
+//            document.querySelector(".img1").src = produkt.billede.guid;
+//            document.querySelector(".beskrivelse").innerHTML = produkt.beskrivelse_produkt;
+//            document.querySelector(".prisen").innerHTML = "<b>Pris: </b>" + produkt.pris;
+        }
+
+
+
+        getJson();
+
+
+
+    </script>
+
+</section>
+
+<?php
+
+get_footer();
