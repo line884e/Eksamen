@@ -20,7 +20,7 @@ get_header();
 <section id="primary" class="content-area">
     <main id="main" class="site-main">
         <h1></h1>
-        <article class="martin">
+        <article class="single_article">
             <div class="wrapper">
                 <div class="col1">
                     <img class="single_billede" src="" alt="">

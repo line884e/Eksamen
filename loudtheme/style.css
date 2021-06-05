@@ -201,6 +201,12 @@ button:focus {
     }
 }
 
+.single_article {
+    max-width: 800px;
+    margin: auto;
+    background-color: none;
+}
+
 .col1,
 .col2 {
     text-align: center;
@@ -250,10 +256,6 @@ h2::before {
 }
 
 
-.martin {
-    max-width: 800px;
-    margin: auto;
-    background-color: none;
-}
+
 
 
