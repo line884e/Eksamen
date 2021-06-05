@@ -184,47 +184,9 @@ button:focus {
     background-color: #E1C9C1;
 }
 
-/*
-episode loop view
-#episoder {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-    grid-gap: 1em;
-    margin: 1em;
-}
 
-#sendeplancontainer {
-    max-width: 28rem;
-    margin: 1rem;
-    margin-right: auto;
-    margin-left: auto;
 
-}
-*/
-
-/*
-.article_sendeplan {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-    border: solid 0.5px black;
-}
-
-.article_sendeplan:hover {
-    color: #D8322D;
-    cursor: pointer;
-}
-
-.article_sendeplan img {
-    width: 8rem;
-    height: 100%;
-}
-
-.article_sendeplan h2 {
-    font-size: 1rem;
-}
-*/
-
-/*podcast single view*/
+/*produkt single view*/
 .wrapper {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -256,6 +218,7 @@ episode loop view
     height: 100%;
 }
 
+/*
 #readmore {
     font-family: 'Roboto', sans-serif;
     margin-left: 13px;
@@ -266,8 +229,10 @@ episode loop view
 #readmore:hover {
     color: #e7929d54;
 }
+*/
 
 /*episode single view*/
+/*
 .peter {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -286,6 +251,7 @@ episode loop view
         grid-template-columns: 1fr;
     }
 }
+*/
 
 /*gå til top/bund knap*/
 #myBtn {

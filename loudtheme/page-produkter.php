@@ -43,27 +43,7 @@ get_header();
     <button onclick="topFunction()" id="myBtn" title="Go to top">Gå til top</button>
 
 
-    <style>
 
-
-        .produkt_div {
-    text-align: center;
-}
-
-/*
-        h2{margin: 0.3em;
-        padding-top: 1em;}
-
-        h3{padding:1em;
-            margin: 0.3em;
-             }
-
-        p{
-            padding: 0;
-        margin: 1em;}
-*/
-
-    </style>
 
     <!--script-->
     <script>
