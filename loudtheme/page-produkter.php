@@ -28,7 +28,7 @@ get_header();
         <div class="produkt_div">
             <h2 class="produkt_h2"></h2>
             <h3></h3>
-        <p></p>
+        <p class="produkt_p"></p>
          </div>
     </article>
 </template>
