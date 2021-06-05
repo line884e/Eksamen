@@ -71,6 +71,7 @@ img {
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
     transition-duration: 0.3s;
     transition-property: box-shadow;
+    text-align: center;
 }
 
 .produkt_article:hover,
