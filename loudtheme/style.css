@@ -58,33 +58,37 @@ img {
     display: none;
 }
 
-::selection{
+::selection {
     text-align: center;
 
 }
 
 .produkt_article {
-background: white;
+    background: white;
     border-radius: 0.5em;
 }
 
-.single_billede{
+.single_billede {
     border-radius: 0.5em;
 }
 
-.beskrivelse_produkt{font-size: 1rem;
+.beskrivelse_produkt {
+    font-size: 1rem;
     text-align: left;
     margin: 0;
     padding: 0;
 
 }
 
-.single_p{
+.single_p {
     text-align: left;
-    padding: 0;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+    color: #4C4B4B;
+    font-size: 0.8rem;
 }
 
-.pris{
+.pris {
     font-size: 1rem;
     text-align: left;
     margin: 0;
@@ -93,27 +97,7 @@ background: white;
 
 
 
-/*
-.episode_margin h2 {
-    margin-top: -15rem;
-}
 
-.episode_titel {
-    margin-left: 15px;
-}
-
-.article_episode:hover {
-    transform: scale(1.01);
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 660px) {
-    .article_episode {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-*/
 
 .podcast_article:hover {
     transform: scale(1.03);
@@ -150,7 +134,7 @@ h3 {
 }
 
 
-produkt_p {
+.produkt_p {
     font-size: 0.6rem;
     padding: 1vw;
     font-weight: 400;
@@ -159,11 +143,13 @@ produkt_p {
 }
 
 
+
+
 button {
     background-color: #E1C9C1;
 }
 
-.laeg_i_kurv{
+.laeg_i_kurv {
     background-color: #535151;
     font-size: 0.6rem;
     margin-top: 2em;
@@ -256,14 +242,14 @@ episode loop view
 .col1,
 .col2 {
     text-align: center;
-/*    background-color: #e7929d54;*/
+    /*    background-color: #e7929d54;*/
 }
 
-.col1{
+.col1 {
     display: flex;
-align-items: center;
-justify-content: center;
-flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .col2 img {
@@ -331,7 +317,8 @@ h2::before {
 }
 
 
-.martin{max-width: 800px;
+.martin {
+    max-width: 800px;
     margin: auto;
     background-color: none;
 }
@@ -359,4 +346,3 @@ h2::before {
     padding: 10px;
 }
 *
-

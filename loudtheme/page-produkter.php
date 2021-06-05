@@ -45,11 +45,12 @@ get_header();
 
     <style>
 
+
         .produkt_div {
     text-align: center;
 }
 
-
+/*
         h2{margin: 0.3em;
         padding-top: 1em;}
 
@@ -60,6 +61,7 @@ get_header();
         p{
             padding: 0;
         margin: 1em;}
+*/
 
     </style>
 
