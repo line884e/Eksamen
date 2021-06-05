@@ -33,7 +33,7 @@ img {
 }
 
 
-/*grid styling på loob view af podcasts*/
+/*grid styling på loopview af produkter */
 #produktcontainer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
@@ -66,15 +66,17 @@ img {
 .produkt_article {
     background: white;
     border-radius: 0.5em;
-      display: inline-block;
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  transition-duration: 0.3s;
-  transition-property: box-shadow;
+    display: inline-block;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    transition-duration: 0.3s;
+    transition-property: box-shadow;
 }
 
-.produkt_article:hover, .produkt_article:focus, .produkt_article:active {
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+.produkt_article:hover,
+.produkt_article:focus,
+.produkt_article:active {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 .single_billede {
@@ -105,18 +107,6 @@ img {
 }
 
 
-
-
-
-.podcast_article:hover {
-    transform: scale(1.03);
-    cursor: pointer;
-}
-
-.podcast_tekst {
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
 
 h1 {
     text-align: center;
