@@ -66,6 +66,15 @@ img {
 .produkt_article {
     background: white;
     border-radius: 0.5em;
+      display: inline-block;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  transition-duration: 0.3s;
+  transition-property: box-shadow;
+}
+
+.produkt_article:hover, .produkt_article:focus, .produkt_article:active {
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
 }
 
 .single_billede {
@@ -138,7 +147,7 @@ h3 {
     font-size: 0.6rem;
     padding: 1vw;
     font-weight: 400;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Trirong', sans-serif;
     color: #4C4B4B;
 }
 
