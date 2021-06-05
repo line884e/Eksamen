@@ -219,40 +219,7 @@ button:focus {
     height: 100%;
 }
 
-/*
-#readmore {
-    font-family: 'Roboto', sans-serif;
-    margin-left: 13px;
-    color: #D8322D;
-    font-weight: 900;
-}
 
-#readmore:hover {
-    color: #e7929d54;
-}
-*/
-
-/*episode single view*/
-/*
-.peter {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
-    margin: 4em;
-}
-
-.col3 img {
-    object-fit: cover;
-    height: 100%;
-}
-
-@media only screen and (max-width: 660px) {
-    .peter {
-        display: grid;
-        grid-template-columns: 1fr;
-    }
-}
-*/
 
 /*gå til top/bund knap*/
 #myBtn {
@@ -290,25 +257,3 @@ h2::before {
 }
 
 
-
-/*
-.col4 img {
-    width: 3rem;
-}
-
-.itunes {
-    padding: 10px;
-}
-
-.podimo {
-    padding: 10px;
-}
-
-.spotify {
-    padding: 10px;
-}
-
-.google {
-    padding: 10px;
-}
-*
